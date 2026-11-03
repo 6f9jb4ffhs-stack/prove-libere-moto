@@ -30,7 +30,7 @@ Estrai TUTTI gli eventi (prove libere, prove cronometrate, race weekend, ecc.) i
 Rispondi SOLO con JSON valido, senza testo prima o dopo e senza backtick.
 
 Ogni evento ha questi campi:
-- "circuit": nome del circuito come scritto nella pagina
+- "circuit": solo il nome del circuito, SENZA numerazioni o numeri di edizione dell'evento (es. "Aragon I" e "Aragon II" diventano entrambi "Aragon")
 - "date_start": data di inizio, formato YYYY-MM-DD
 - "date_end": data di fine, formato YYYY-MM-DD (uguale a date_start se è un solo giorno)
 - "event_type": breve etichetta come nella pagina (es. "Prove cronometrate", "Race weekend")
@@ -103,6 +103,7 @@ def clean_event(ev, site, today):
         if d_end < d_start or d_end < today:
             return None
         circuit = (ev.get("circuit") or "").strip()
+        circuit = re.sub(r"\s+(?:[IVX]{1,4}|\d{1,2})$", "", circuit).strip()  # toglie "II", "2" finali
         if not circuit:
             return None
         prices = []
