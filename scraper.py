@@ -78,7 +78,7 @@ def extract(client, organizer, text, today):
     )
     if msg.stop_reason == "max_tokens":
         raise RuntimeError("risposta dell'AI troncata")
-    raw = msg.content[0].text.strip()
+    raw = "".join(b.text for b in msg.content if b.type == "text").strip()
     raw = re.sub(r"^```(?:json)?|```$", "", raw, flags=re.M).strip()
     data = json.loads(raw)
     if not isinstance(data, list):
