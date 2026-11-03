@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prove libere moto in pista</title>
+<style>
+:root{
+  --bg:#eef0f2; --surface:#ffffff; --ink:#16191d; --muted:#5b636b; --line:#d9dde1;
+  --kerb:#d7261e; --ok:#1e7f4f; --warn:#9a5b00; --bad:#8a2b2b;
+  --head:"Bahnschrift","DIN Alternate","Roboto Condensed","Arial Narrow",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121417;--surface:#1b1f24;--ink:#eceef0;--muted:#9aa3ab;--line:#2c3239;--kerb:#ff5a4f;--ok:#54c58a;--warn:#e0a34a;--bad:#e08a8a}
+}
+*{box-sizing:border-box}
+html{color-scheme:light dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 var(--body)}
+.kerb{height:10px;background:repeating-linear-gradient(90deg,var(--kerb) 0 28px,var(--surface) 28px 56px)}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font:700 2rem/1.1 var(--head);margin:8px 0 4px;letter-spacing:.01em}
+.sub{color:var(--muted);margin:0 0 18px}
+.filters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+@media (min-width:640px){.filters{grid-template-columns:repeat(4,1fr)}}
+select{width:100%;padding:10px 8px;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px}
+select:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--kerb);outline-offset:2px}
+.opts{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px;color:var(--muted);font-size:.9rem}
+.opts label{display:flex;gap:8px;align-items:center}
+.opts button{font:inherit;color:var(--ink);background:none;border:0;text-decoration:underline;cursor:pointer;padding:4px}
+ul{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+li{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:14px;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+.date{font-family:var(--head);text-align:center;line-height:1.05}
+.date b{display:block;font-size:1.8rem}
+.date span{display:block;font-size:.95rem;color:var(--muted)}
+.date i{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:4px}
+.circuit{font:700 1.2rem/1.2 var(--head);margin:0}
+.meta{color:var(--muted);font-size:.92rem;margin:2px 0 6px}
+.row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:.95rem}
+.price{font-weight:600}
+.st-disponibile{color:var(--ok)} .st-lista_attesa{color:var(--warn)} .st-esaurito{color:var(--bad)} .st-non_indicata{color:var(--muted)}
+.prices{color:var(--muted);font-size:.85rem;margin:4px 0 0}
+.notes{color:var(--muted);font-size:.85rem;margin:4px 0 0}
+li a.go{display:inline-block;margin-top:8px;color:var(--ink);font-weight:600}
+.empty,.status,.warn{padding:16px;color:var(--muted)}
+.warn{color:var(--warn);padding:8px 0}
+footer{color:var(--muted);font-size:.85rem;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="kerb" aria-hidden="true"></div>
+<main>
+  <h1>Prove libere moto in pista</h1>
+  <p class="sub" id="sub">Caricamento…</p>
+  <div class="filters">
+    <select id="f-org" aria-label="Organizzatore"></select>
+    <select id="f-circuit" aria-label="Circuito"></select>
+    <select id="f-type" aria-label="Tipo di evento"></select>
+    <select id="f-month" aria-label="Mese"></select>
+  </div>
+  <div class="opts">
+    <label><input type="checkbox" id="f-hide"> Nascondi gli esauriti</label>
+    <button id="reset" type="button">Azzera i filtri</button>
+  </div>
+  <div id="warn"></div>
+  <ul id="list"></ul>
+  <footer>I dati sono letti in automatico dai siti degli organizzatori con l'aiuto di un'AI e possono contenere errori. Controlla sempre date, prezzi e disponibilità sul sito dell'organizzatore prima di prenotare.</footer>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const LABEL = {disponibile:"Disponibile", lista_attesa:"Lista d'attesa", esaurito:"Esaurito", non_indicata:"Disponibilità non indicata"};
+const SEL = {org:$("f-org"), circuit:$("f-circuit"), type:$("f-type"), month:$("f-month")};
+const ALL = {org:"Tutti gli organizzatori", circuit:"Tutti i circuiti", type:"Tutti i tipi", month:"Tutti i mesi"};
+let events = [];
+
+const day = s => new Date(s + "T00:00:00");
+const monthKey = s => s.slice(0, 7);
+const monthName = k => { const n = day(k + "-01").toLocaleDateString("it-IT", {month:"long", year:"numeric"}); return n[0].toUpperCase() + n.slice(1); };
+const eur = n => n.toLocaleString("it-IT", {style:"currency", currency:"EUR", maximumFractionDigits:0});
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function fill(select, key, values, labeler = v => v) {
+  const current = select.value;
+  select.replaceChildren(new Option(ALL[key], ""));
+  values.forEach(v => select.append(new Option(labeler(v), v)));
+  select.value = values.includes(current) ? current : "";
+}
+
+function buildFilters() {
+  const uniq = f => [...new Set(events.map(f).filter(Boolean))].sort((a, b) => a.localeCompare(b, "it"));
+  fill(SEL.org, "org", uniq(e => e.organizer));
+  fill(SEL.circuit, "circuit", uniq(e => e.circuit));
+  fill(SEL.type, "type", uniq(e => e.event_type));
+  fill(SEL.month, "month", [...new Set(events.map(e => monthKey(e.date_start)))].sort(), monthName);
+}
+
+function visible() {
+  return events.filter(e =>
+    (!SEL.org.value || e.organizer === SEL.org.value) &&
+    (!SEL.circuit.value || e.circuit === SEL.circuit.value) &&
+    (!SEL.type.value || e.event_type === SEL.type.value) &&
+    (!SEL.month.value || monthKey(e.date_start) === SEL.month.value || monthKey(e.date_end) === SEL.month.value) &&
+    !($("f-hide").checked && e.availability === "esaurito"));
+}
+
+function render() {
+  const list = $("list"), rows = visible();
+  list.replaceChildren();
+  $("sub").textContent = rows.length + (rows.length === 1 ? " giornata trovata" : " giornate trovate");
+  if (!rows.length) {
+    list.append(el("li", "empty", events.length ? "Nessuna giornata con questi filtri. Prova ad azzerarli." : "Nessun dato disponibile. Il primo aggiornamento non è ancora stato eseguito."));
+    return;
+  }
+  for (const e of rows) {
+    const a = day(e.date_start), b = day(e.date_end), multi = e.date_end !== e.date_start;
+    const li = el("li");
+    const d = el("div", "date");
+    d.append(el("b", null, a.getDate()), el("span", null, a.toLocaleDateString("it-IT", {month:"short"})));
+    if (multi) d.append(el("i", null, "fino al " + b.getDate() + " " + b.toLocaleDateString("it-IT", {month:"short"})));
+    const body = el("div");
+    body.append(el("h2", "circuit", e.circuit), el("p", "meta", [e.organizer, e.event_type].filter(Boolean).join(", ")));
+    const row = el("div", "row");
+    if (e.prices.length) row.append(el("span", "price", "da " + eur(Math.min(...e.prices.map(p => p.amount_eur)))));
+    row.append(el("span", "st-" + e.availability, LABEL[e.availability] || LABEL.non_indicata));
+    body.append(row);
+    if (e.prices.length > 1 || (e.prices[0] && e.prices[0].label))
+      body.append(el("p", "prices", e.prices.map(p => (p.label ? p.label + ": " : "") + eur(p.amount_eur)).join("; ")));
+    if (e.notes) body.append(el("p", "notes", e.notes));
+    if (/^https?:\/\//.test(e.url)) {
+      const link = el("a", "go", "Apri sul sito dell'organizzatore");
+      link.href = e.url; link.target = "_blank"; link.rel = "noopener noreferrer";
+      body.append(link);
+    }
+    li.append(d, body);
+    list.append(li);
+  }
+}
+
+function showStatus(data) {
+  const failed = Object.entries(data.sources || {}).filter(([, s]) => !s.ok).map(([n]) => n);
+  if (failed.length) $("warn").replaceChildren(el("p", "warn", "Ultimo aggiornamento non riuscito per: " + failed.join(", ") + ". Per questi siti potresti vedere dati meno recenti."));
+  if (data.updated) $("warn").append(el("p", "status", "Dati aggiornati il " + new Date(data.updated).toLocaleString("it-IT", {dateStyle:"long", timeStyle:"short"})));
+}
+
+Object.values(SEL).forEach(s => s.addEventListener("change", render));
+$("f-hide").addEventListener("change", render);
+$("reset").addEventListener("click", () => { Object.values(SEL).forEach(s => s.value = ""); $("f-hide").checked = false; render(); });
+
+fetch("data/events.json", {cache:"no-store"})
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => { events = data.events || []; buildFilters(); showStatus(data); render(); })
+  .catch(() => { $("sub").textContent = "Impossibile caricare i dati."; });
+</script>
+</body>
+</html>
