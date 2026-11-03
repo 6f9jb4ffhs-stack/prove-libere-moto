@@ -19,7 +19,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; PisteLibereBot/1.0)"}
 # Per aggiungere un organizzatore basta aggiungere una riga qui.
 SITES = [
     {"organizer": "Rossocorsa", "url": "https://www.rossocorsaonline.com/prove"},
-    {"organizer": "Gully Racing", "url": "https://www.gullyracing.it/calendario"},
+    {"organizer": "Gully Racing", "url": "https://www.gullyracing.it/calendario", "keep_repeats": True},
     {"organizer": "Rehm Race Days", "url": "https://www.rehmracedays.com/it/rehm-race-calendario/"},
     {"organizer": "Promoracing", "url": "https://www.promoracing.it/it/calendario/moto"},
     {"organizer": "Actionbike", "url": "https://www.actionbike.de/en/booking"},
@@ -41,7 +41,7 @@ Ogni evento ha questi campi:
 
 Regole:
 - Non inventare nulla. Se un dato non è nella pagina usa null (lista vuota per prices, "non_indicata" per availability).
-- Se l'anno non è scritto, deducilo dal contesto della pagina; se non è deducibile, ometti l'evento.
+- Se l'anno non è scritto nel testo, deducilo dalla data di oggi: scegli il primo anno in cui quel giorno e mese cadono oggi o in futuro; se l'elenco passa da dicembre a gennaio, incrementa l'anno.
 - Se un prezzo ha un secondo valore tra parentesi e il significato non è spiegato, inseriscilo con label "prezzo alternativo (significato non indicato)".
 - Se ci sono più tariffe per lo stesso evento (es. 1, 2 o 3 giorni), inserisci una voce di prezzo per ciascuna con label chiara.
 - Se il sito elenca ogni giorno come riga separata, mantieni un evento per riga.
@@ -54,11 +54,16 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 AVAILABILITY = {"disponibile", "lista_attesa", "esaurito", "non_indicata"}
 
 
-def page_to_text(html, base_url):
+def page_to_text(html, base_url, keep_repeats=False):
     """Toglie il codice, tiene il testo e i link, scarta le righe ripetute (rumore)."""
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "svg", "nav", "footer"]):
         tag.decompose()
+    # Alcuni siti (Gully) mettono il link dell'evento in un attributo onclick invece che in un <a>.
+    for tag in soup.find_all(onclick=True):
+        m = re.search(r"['\"](/[^'\"]+|https?://[^'\"]+)['\"]", tag["onclick"])
+        if m and "print" not in m.group(1):
+            tag.append(f" [{urljoin(base_url, m.group(1))}] ")
     for a in soup.find_all("a", href=True):
         href = a["href"]
         if href.startswith(("#", "mailto:", "tel:", "javascript:")):
@@ -66,8 +71,9 @@ def page_to_text(html, base_url):
         a.replace_with(f"{a.get_text(' ', strip=True)} [{urljoin(base_url, href)}]")
     lines = [re.sub(r"\s+", " ", ln).strip() for ln in soup.get_text("\n").splitlines()]
     lines = [ln for ln in lines if ln]
-    counts = Counter(lines)
-    lines = [ln for ln in lines if counts[ln] <= 5]
+    if not keep_repeats:
+        counts = Counter(lines)
+        lines = [ln for ln in lines if counts[ln] <= 5]
     return "\n".join(lines)[:MAX_CHARS]
 
 
@@ -146,12 +152,11 @@ def main():
             resp.raise_for_status()
             if resp.encoding and resp.encoding.lower() == "iso-8859-1":
                 resp.encoding = resp.apparent_encoding
-            text = page_to_text(resp.text, site["url"])
+            text = page_to_text(resp.text, site["url"], site.get("keep_repeats", False))
             raw = extract(client, org, text, today)
             found = [e for e in (clean_event(x, site, today) for x in raw) if e]
-            had_before = any(e["organizer"] == org for e in old_events)
-            if not found and had_before:
-                raise RuntimeError("0 eventi trovati: tengo i dati precedenti")
+            if not found:
+                raise RuntimeError("0 eventi trovati: controlla la pagina o il testo estratto")
             events += found
             sources[org] = {"ok": True, "count": len(found), "last_success": now}
             print(f"[OK] {org}: {len(found)} eventi")
