@@ -45,6 +45,7 @@ Regole:
 - Se un prezzo ha un secondo valore tra parentesi e il significato non è spiegato, inseriscilo con label "prezzo alternativo (significato non indicato)".
 - Se ci sono più tariffe per lo stesso evento (es. 1, 2 o 3 giorni), inserisci una voce di prezzo per ciascuna con label chiara.
 - Se il sito elenca ogni giorno come riga separata, mantieni un evento per riga.
+- Includi solo vere giornate in pista, con una data e un circuito. Ignora buoni regalo, abbonamenti, servizi, assicurazioni, merchandising e qualsiasi altra cosa che non sia una giornata in pista.
 
 TESTO DELLA PAGINA:
 {text}
