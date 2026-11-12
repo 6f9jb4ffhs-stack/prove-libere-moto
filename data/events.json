@@ -1,30 +1,30 @@
 {
- "updated": "2026-11-11T05:44:54+00:00",
+ "updated": "2026-11-12T05:47:42+00:00",
  "sources": {
   "Rossocorsa": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-11T05:44:54+00:00"
+   "last_success": "2026-11-12T05:47:42+00:00"
   },
   "Gully Racing": {
    "ok": true,
    "count": 3,
-   "last_success": "2026-11-11T05:44:54+00:00"
+   "last_success": "2026-11-12T05:47:42+00:00"
   },
   "Rehm Race Days": {
    "ok": true,
    "count": 13,
-   "last_success": "2026-11-11T05:44:54+00:00"
+   "last_success": "2026-11-12T05:47:42+00:00"
   },
   "Promoracing": {
    "ok": true,
    "count": 6,
-   "last_success": "2026-11-11T05:44:54+00:00"
+   "last_success": "2026-11-12T05:47:42+00:00"
   },
   "Actionbike": {
    "ok": true,
    "count": 11,
-   "last_success": "2026-11-11T05:44:54+00:00"
+   "last_success": "2026-11-12T05:47:42+00:00"
   }
  },
  "events": [
@@ -36,21 +36,21 @@
    "event_type": "Prove cronometrate",
    "prices": [
     {
-     "label": "Prezzo intero 3 giorni",
+     "label": "PREZZO INTERO 3 GIORNI",
      "amount_eur": 759.0
     },
     {
-     "label": "Prezzo promozionale 3 giorni",
+     "label": "PREZZO PROMOZIONALE 3 GIORNI",
      "amount_eur": 669.0
     },
     {
-     "label": "Prezzo scontato 3 giorni",
+     "label": "PREZZO SCONTATO 3 GIORNI",
      "amount_eur": 699.0
     }
    ],
    "availability": "lista_attesa",
    "url": "https://www.gullyracing.it/prodotto?id=174",
-   "notes": "Indicazione \"lista attesa\" riportata accanto al prezzo intero 3 giorni."
+   "notes": "Indicazione (LISTA ATTESA) riportata sopra il prezzo intero 3 giorni."
   },
   {
    "organizer": "Rehm Race Days",
@@ -66,7 +66,7 @@
    ],
    "availability": "lista_attesa",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/10/66_Timetable_Jerez_18.-20.11.2026.pdf",
-   "notes": "Briefing in DE, FR, IT, EN. Riding in Speed Groups, 105 db. Iscrizione in lista d'attesa, nessun pagamento necessario."
+   "notes": "Briefing in DE, FR, IT, EN. Riding in speed groups, 105 db. Iscrizione in lista d'attesa, nessun pagamento necessario."
   },
   {
    "organizer": "Rehm Race Days",
@@ -82,7 +82,7 @@
    ],
    "availability": "lista_attesa",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/07/88_Timetable_Barcelona_26.-27.11.2026.pdf",
-   "notes": "105 db e 8.5h tracktime / per. Iscrizione in lista d'attesa, nessun pagamento necessario."
+   "notes": "105 db e 8.5h tracktime. Iscrizione in lista d'attesa, nessun pagamento necessario."
   },
   {
    "organizer": "Rehm Race Days",
@@ -105,7 +105,7 @@
    "circuit": "Cartagena",
    "date_start": "2026-12-27",
    "date_end": "2026-12-31",
-   "event_type": "4h Endurance con LeMans Start",
+   "event_type": "4h Endurance with LeMans Start",
    "prices": [
     {
      "label": "Event: Cartagena IV",
@@ -124,21 +124,21 @@
    "event_type": "Races & Endurances",
    "prices": [
     {
-     "label": "Event Valencia II 30.+31.12.2026",
+     "label": "Valencia II, 30.+31.12.2026",
      "amount_eur": 540
     },
     {
-     "label": "Event Valencia II 27.-29.12.2026",
+     "label": "Valencia II, 27.-29.12.2026",
      "amount_eur": 790
     },
     {
-     "label": "Event Valencia II 27.-31.12.2026",
+     "label": "Valencia II, 27.-31.12.2026",
      "amount_eur": 1290
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/91_Timetable_Valencia_27.-31.12.2026.pdf",
-   "notes": "105 db."
+   "notes": "105 db. Tariffe diverse in base ai giorni scelti."
   },
   {
    "organizer": "Rehm Race Days",
@@ -186,18 +186,18 @@
    ],
    "availability": "lista_attesa",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/101_Timetable_Jerez_22.-24.01.2027.pdf",
-   "notes": "Briefing in DE, FR, IT, ES, EN. Riding in Speed Groups, 105 db. Iscrizione in lista d'attesa, nessun pagamento necessario."
+   "notes": "Briefing in DE, FR, IT, ES, EN. Riding in speed groups, 105 db. Iscrizione in lista d'attesa, nessun pagamento necessario."
   },
   {
    "organizer": "Rossocorsa",
    "circuit": "Valencia",
    "date_start": "2027-02-05",
    "date_end": "2027-02-07",
-   "event_type": "Prove",
+   "event_type": null,
    "prices": [
     {
      "label": "a partire da",
-     "amount_eur": 759.0
+     "amount_eur": 759
     }
    ],
    "availability": "non_indicata",
@@ -245,17 +245,17 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 990.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 1040.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-02-andalucia-incl-transport",
-   "notes": "Evento con trasporto incluso (da titolo)."
+   "notes": "Trasporto incluso (incl. Transport)"
   },
   {
    "organizer": "Gully Racing",
@@ -265,11 +265,11 @@
    "event_type": "Prove cronometrate",
    "prices": [
     {
-     "label": "Prezzo promozionale 3 giorni",
-     "amount_eur": 749.0
+     "label": "PREZZO PROMOZIONALE 3 GIORNI",
+     "amount_eur": 759.0
     },
     {
-     "label": "Prezzo intero 3 giorni",
+     "label": "PREZZO INTERO 3 GIORNI",
      "amount_eur": 779.0
     }
    ],
@@ -291,18 +291,18 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/108_Timetable_Cartagena_25.-27.02.2027.pdf",
-   "notes": "Briefing in DE, EN, IT, ES, FR. 100 db."
+   "notes": "Briefing in DE, EN, IT, ES, FR. 100 db. Il nome del timetable riporta 25.-27.02.2027."
   },
   {
    "organizer": "Rossocorsa",
    "circuit": "Jerez",
    "date_start": "2027-03-05",
    "date_end": "2027-03-07",
-   "event_type": "Prove",
+   "event_type": null,
    "prices": [
     {
      "label": "a partire da",
-     "amount_eur": 759.0
+     "amount_eur": 759
     }
    ],
    "availability": "non_indicata",
@@ -350,11 +350,11 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 850.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 890.0
     }
    ],
@@ -392,7 +392,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/109_Timetable_Portimao_03.-05.04.2027.pdf",
-   "notes": null
+   "notes": "Opzioni aggiuntive disponibili: Boxen PT, Perfect Box by Alf (PT)."
   },
   {
    "organizer": "Actionbike",
@@ -402,11 +402,11 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 595.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 660.0
     }
    ],
@@ -428,7 +428,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/110_Timetable_Aragon_22.-24.04.2027.pdf",
-   "notes": null
+   "notes": "Disclaimer disponibile."
   },
   {
    "organizer": "Rehm Race Days",
@@ -454,11 +454,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 590.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 650.0
     }
    ],
@@ -474,11 +474,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 495.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 560.0
     }
    ],
@@ -494,11 +494,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 750.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 780.0
     }
    ],
@@ -514,11 +514,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 790.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 840.0
     }
    ],
@@ -535,7 +535,7 @@
    "prices": [],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-07-cremona",
-   "notes": "Prezzo 0,00 indicato, possibile segnaposto. Il link contiene 'cremona' anziché Slovakiaring."
+   "notes": "Prezzo indicato come 0,00 EUR"
   },
   {
    "organizer": "Actionbike",
@@ -545,11 +545,11 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "tariffa 1 (significato non indicato)",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 540.0
     },
     {
-     "label": "tariffa 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 590.0
     }
    ],
@@ -565,7 +565,7 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo",
+     "label": "prezzo (significato non indicato)",
      "amount_eur": 530.0
     }
    ],
@@ -581,11 +581,11 @@
    "event_type": "Prove cronometrate",
    "prices": [
     {
-     "label": "Prezzo scontato 3 giorni",
+     "label": "PREZZO SCONTATO 3 GIORNI",
      "amount_eur": 699.0
     },
     {
-     "label": "Prezzo intero 3 giorni",
+     "label": "PREZZO INTERO 3 GIORNI",
      "amount_eur": 749.0
     }
    ],
