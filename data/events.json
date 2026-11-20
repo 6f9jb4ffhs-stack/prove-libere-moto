@@ -1,30 +1,30 @@
 {
- "updated": "2026-11-19T05:50:15+00:00",
+ "updated": "2026-11-20T05:50:14+00:00",
  "sources": {
   "Rossocorsa": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-19T05:50:15+00:00"
+   "last_success": "2026-11-20T05:50:14+00:00"
   },
   "Gully Racing": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-19T05:50:15+00:00"
+   "last_success": "2026-11-20T05:50:14+00:00"
   },
   "Rehm Race Days": {
    "ok": true,
-   "count": 13,
-   "last_success": "2026-11-19T05:50:15+00:00"
+   "count": 15,
+   "last_success": "2026-11-20T05:50:14+00:00"
   },
   "Promoracing": {
    "ok": true,
    "count": 6,
-   "last_success": "2026-11-19T05:50:15+00:00"
+   "last_success": "2026-11-20T05:50:14+00:00"
   },
   "Actionbike": {
    "ok": true,
    "count": 11,
-   "last_success": "2026-11-19T05:50:15+00:00"
+   "last_success": "2026-11-20T05:50:14+00:00"
   }
  },
  "events": [
@@ -33,11 +33,11 @@
    "circuit": "Jerez",
    "date_start": "2026-11-18",
    "date_end": "2026-11-20",
-   "event_type": "Riding in Speed Groups",
+   "event_type": null,
    "prices": [],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/10/66_Timetable_Jerez_18.-20.11.2026.pdf",
-   "notes": "Briefing in DE, FR, IT, EN. 105 db."
+   "notes": "Briefing in DE, FR, IT, EN. Riding in speed groups. 105 db."
   },
   {
    "organizer": "Rehm Race Days",
@@ -53,7 +53,7 @@
    ],
    "availability": "disponibile",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/07/88_Timetable_Barcelona_26.-27.11.2026.pdf",
-   "notes": "105 db & 8.5h tracktime / per. Nur wenige Tickets verfügbar."
+   "notes": "105 db & 8.5h tracktime. Nur wenige Tickets verfügbar (pochi biglietti rimasti)."
   },
   {
    "organizer": "Rehm Race Days",
@@ -69,14 +69,14 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/89_Timetable_Cartagena_22.-25.12.2026.pdf",
-   "notes": "100 db, massimo 25 piloti per gruppo."
+   "notes": "100 db. Massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
    "circuit": "Cartagena",
    "date_start": "2026-12-27",
    "date_end": "2026-12-31",
-   "event_type": "4h Endurance",
+   "event_type": "4h Endurance con LeMans Start",
    "prices": [
     {
      "label": "Event: Cartagena IV",
@@ -85,7 +85,23 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/90_Timetable_Cartagena_27.-31.12.2026.pdf",
-   "notes": "Briefing in DE, EN, IT, FR. LeMans Start, 100 db, massimo 25 piloti per gruppo."
+   "notes": "Briefing in DE, EN, IT, FR. 100 db. Massimo 25 piloti per gruppo."
+  },
+  {
+   "organizer": "Rehm Race Days",
+   "circuit": "Valencia",
+   "date_start": "2026-12-27",
+   "date_end": "2026-12-29",
+   "event_type": "Races & Endurances",
+   "prices": [
+    {
+     "label": "Event: Valencia II (27.-29.12.2026)",
+     "amount_eur": 790
+    }
+   ],
+   "availability": "non_indicata",
+   "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/91_Timetable_Valencia_27.-31.12.2026.pdf",
+   "notes": "105 db."
   },
   {
    "organizer": "Rehm Race Days",
@@ -95,16 +111,24 @@
    "event_type": "Races & Endurances",
    "prices": [
     {
-     "label": "Event Valencia II, 30.+31.12.2026",
-     "amount_eur": 540
-    },
-    {
-     "label": "Event Valencia II, 27.-29.12.2026",
-     "amount_eur": 790
-    },
-    {
-     "label": "Event Valencia II, 27.-31.12.2026",
+     "label": "Event: Valencia II (27.-31.12.2026)",
      "amount_eur": 1290
+    }
+   ],
+   "availability": "non_indicata",
+   "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/91_Timetable_Valencia_27.-31.12.2026.pdf",
+   "notes": "105 db."
+  },
+  {
+   "organizer": "Rehm Race Days",
+   "circuit": "Valencia",
+   "date_start": "2026-12-30",
+   "date_end": "2026-12-31",
+   "event_type": "Races & Endurances",
+   "prices": [
+    {
+     "label": "Event: Valencia II (30.+31.12.2026)",
+     "amount_eur": 540
     }
    ],
    "availability": "non_indicata",
@@ -125,7 +149,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/92_Timetable_Cartagena_02.-05.01.2027.pdf",
-   "notes": "100 db, massimo 25 piloti per gruppo."
+   "notes": "100 db. Massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
@@ -148,7 +172,7 @@
    "circuit": "Jerez",
    "date_start": "2027-01-22",
    "date_end": "2027-01-24",
-   "event_type": "Riding in Speed Groups",
+   "event_type": null,
    "prices": [
     {
      "label": "Event: Jerez I",
@@ -157,7 +181,7 @@
    ],
    "availability": "disponibile",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/101_Timetable_Jerez_22.-24.01.2027.pdf",
-   "notes": "Briefing in DE, FR, IT, ES, EN. 105 db. Nur wenige Tickets verfügbar."
+   "notes": "Briefing in DE, FR, IT, ES, EN. Riding in speed groups. 105 db. Nur wenige Tickets verfügbar."
   },
   {
    "organizer": "Rossocorsa",
@@ -173,7 +197,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rossocorsaonline.com/prove/detail/391",
-   "notes": null
+   "notes": "Prezzo indicato come 'a partire da'; tipologia dell'evento non specificata nella pagina."
   },
   {
    "organizer": "Promoracing",
@@ -216,17 +240,17 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 990
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 990.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 1040
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 1040.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-02-andalucia-incl-transport",
-   "notes": "Evento 02, con trasporto incluso (da titolo evento)."
+   "notes": "Nel titolo dell'evento è indicato 'incl. Transport' (trasporto incluso)."
   },
   {
    "organizer": "Gully Racing",
@@ -278,7 +302,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rossocorsaonline.com/prove/detail/393",
-   "notes": null
+   "notes": "Prezzo indicato come 'a partire da'; tipologia dell'evento non specificata nella pagina."
   },
   {
    "organizer": "Promoracing",
@@ -321,17 +345,17 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 850
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 850.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 890
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 890.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-03-misano",
-   "notes": "Evento 03."
+   "notes": null
   },
   {
    "organizer": "Rehm Race Days",
@@ -363,7 +387,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/109_Timetable_Portimao_03.-05.04.2027.pdf",
-   "notes": null
+   "notes": "Opzioni extra presenti: Boxen PT, Perfect Box by Alf, transport roundtrip (prezzi non indicati)."
   },
   {
    "organizer": "Actionbike",
@@ -373,17 +397,17 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 595
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 595.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 660
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 660.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-04-rijeka",
-   "notes": "Evento 04."
+   "notes": null
   },
   {
    "organizer": "Rehm Race Days",
@@ -399,7 +423,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/110_Timetable_Aragon_22.-24.04.2027.pdf",
-   "notes": "Disclaimer Aragon I disponibile."
+   "notes": "Opzioni extra presenti: transport roundtrip Aragon-Barcelona e ex Lager Cartagena (prezzi non indicati)."
   },
   {
    "organizer": "Rehm Race Days",
@@ -415,7 +439,7 @@
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/111_Timetable_Barcelona_27.-29.04.2027.pdf",
-   "notes": null
+   "notes": "Opzione extra presente: transport roundtrip ex Lager Cartagena (prezzo non indicato)."
   },
   {
    "organizer": "Actionbike",
@@ -425,17 +449,17 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 590
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 590.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 650
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 650.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-05-tazio-nuvolari",
-   "notes": "Evento 05."
+   "notes": null
   },
   {
    "organizer": "Actionbike",
@@ -445,17 +469,17 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 495
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 495.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 560
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 560.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-06-rijeka",
-   "notes": "Evento 06."
+   "notes": null
   },
   {
    "organizer": "Actionbike",
@@ -465,17 +489,17 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 750
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 750.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 780
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 780.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-07-most",
-   "notes": "Evento 07."
+   "notes": null
   },
   {
    "organizer": "Actionbike",
@@ -485,28 +509,37 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 790
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 790.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 840
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 840.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-08-brno",
-   "notes": "Evento 08."
+   "notes": null
   },
   {
    "organizer": "Actionbike",
-   "circuit": "Slovakiaring",
-   "date_start": "2027-09-24",
-   "date_end": "2027-09-26",
+   "circuit": "Pannoniaring",
+   "date_start": "2027-09-17",
+   "date_end": "2027-09-19",
    "event_type": null,
-   "prices": [],
+   "prices": [
+    {
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 489.0
+    },
+    {
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 539.0
+    }
+   ],
    "availability": "non_indicata",
-   "url": "https://www.actionbike.de/en/events/sessions/event-07-cremona",
-   "notes": "Prezzo indicato 0,00 EUR. Lo slug dell'URL riporta 'cremona', non 'slovakiaring'."
+   "url": "https://www.actionbike.de/en/events/sessions/event-09-pannoniaring",
+   "notes": null
   },
   {
    "organizer": "Actionbike",
@@ -516,17 +549,17 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 540
+     "label": "prezzo (primo valore indicato)",
+     "amount_eur": 540.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
-     "amount_eur": 590
+     "label": "prezzo (secondo valore indicato)",
+     "amount_eur": 590.0
     }
    ],
    "availability": "non_indicata",
-   "url": "https://www.actionbike.de/en/events/sessions/event-10-rijeka",
-   "notes": "Evento 11."
+   "url": "https://www.actionbike.de/en/events/sessions/event-11-rijeka",
+   "notes": null
   },
   {
    "organizer": "Actionbike",
@@ -536,13 +569,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
-     "amount_eur": 530
+     "label": "prezzo",
+     "amount_eur": 530.0
     }
    ],
    "availability": "non_indicata",
-   "url": "https://www.actionbike.de/en/events/sessions/event-09-rijeka",
-   "notes": "Evento 10."
+   "url": "https://www.actionbike.de/en/events/sessions/event-10-rijeka",
+   "notes": null
   },
   {
    "organizer": "Gully Racing",
