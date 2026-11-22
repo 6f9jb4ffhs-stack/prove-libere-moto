@@ -36,9 +36,10 @@ select:focus-visible,a:focus-visible,input:focus-visible,button:focus-visible{ou
 ul{list-style:none;margin:0;padding:0}
 .month{font:700 1.15rem/1 var(--head);margin:26px 0 10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .ev{position:relative;display:grid;grid-template-columns:64px 1fr;gap:6px 16px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--none);border-radius:10px;padding:14px 16px 14px 12px;margin-bottom:10px}
-.ev.st-disponibile{border-left-color:var(--ok)}
-.ev.st-lista_attesa{border-left-color:var(--warn)}
-.ev.st-esaurito{border-left-color:var(--bad);opacity:.68}
+.ev.lv-ok{border-left-color:var(--ok)}
+.ev.lv-warn{border-left-color:var(--warn)}
+.ev.lv-bad{border-left-color:var(--bad)}
+.ev.st-esaurito{opacity:.68}
 .date{font-family:var(--head);text-align:center;line-height:1}
 .date b{display:block;font-size:2.2rem}
 .date span{display:block;font-size:1rem;color:var(--muted);margin-top:2px}
@@ -47,7 +48,7 @@ ul{list-style:none;margin:0;padding:0}
 .meta{color:var(--muted);font-size:.92rem;margin:3px 0 0}
 .facts{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:10px}
 .status{font-weight:700;font-size:.9rem}
-.st-disponibile .status{color:var(--ok)} .st-lista_attesa .status{color:var(--warn)} .st-esaurito .status{color:var(--bad)} .st-non_indicata .status{color:var(--muted);font-weight:500}
+.lv-ok .status{color:var(--ok)} .lv-warn .status{color:var(--warn)} .lv-bad .status{color:var(--bad)} .lv-none .status{color:var(--muted);font-weight:500}
 .price{font:700 1.15rem/1 var(--head)}
 .prices{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .notes{color:var(--muted);font-size:.85rem;margin:4px 0 0}
@@ -88,6 +89,7 @@ footer{color:var(--muted);font-size:.85rem;margin-top:26px;border-top:1px solid 
 <script>
 const $ = id => document.getElementById(id);
 const LABEL = {disponibile:"Disponibile", lista_attesa:"Lista d'attesa", esaurito:"Esaurito", non_indicata:"Disponibilità non indicata"};
+const LEVEL = {disponibile:"ok", lista_attesa:"warn", esaurito:"bad", non_indicata:"none"};
 const SEL = {org:$("f-org"), circuit:$("f-circuit"), month:$("f-month")};
 const ALL = {org:"Tutti gli organizzatori", circuit:"Tutti i circuiti", month:"Tutti i mesi"};
 let events = [];
@@ -124,7 +126,8 @@ function visible() {
 function card(e) {
   const a = day(e.date_start), b = day(e.date_end), multi = e.date_end !== e.date_start;
   const av = LABEL[e.availability] ? e.availability : "non_indicata";
-  const li = el("li", "ev st-" + av);
+  const level = ["ok", "warn", "bad", "none"].includes(e.status_level) ? e.status_level : LEVEL[av];
+  const li = el("li", "ev st-" + av + " lv-" + level);
 
   const d = el("div", "date");
   d.append(el("b", null, a.getDate()), el("span", null, a.toLocaleDateString("it-IT", {month:"short"})));
@@ -143,7 +146,7 @@ function card(e) {
 
   const side = el("div", "side"), facts = el("div", "facts");
   if (e.prices.length) facts.append(el("span", "price", "da " + eur(Math.min(...e.prices.map(p => p.amount_eur)))));
-  facts.append(el("span", "status", LABEL[av]));
+  facts.append(el("span", "status", e.status_label || LABEL[av]));
   side.append(facts);
 
   li.append(d, body, side);
