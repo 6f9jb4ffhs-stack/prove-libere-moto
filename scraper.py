@@ -23,6 +23,8 @@ SITES = [
     {"organizer": "Rehm Race Days", "url": "https://www.rehmracedays.com/it/rehm-race-calendario/"},
     {"organizer": "Promoracing", "url": "https://www.promoracing.it/it/calendario/moto"},
     {"organizer": "Actionbike", "url": "https://www.actionbike.de/en/booking"},
+    {"organizer": "CR Moto", "url": "https://www.crmoto.eu/", "keep_repeats": True, "booked_levels": True,
+     "hint": "Questa è la home di CR Moto (in inglese) con tutti i mesi. Regole per questo sito:\n- circuit: il nome del circuito dell'evento (es. 'Aragón', 'Slovakia Ring').\n- Le date sono scritte come 'April 2-4, 2027' o 'May 31 – June 2, 2027': usa il primo e l'ultimo giorno.\n- prices: un solo prezzo, quello in grassetto (es. €550.00), con label vuota. Il prezzo barrato non va in prices. Se il prezzo manca, lista vuota.\n- notes: se la pagina indica una scadenza del prezzo ('valid till 2027-02-08') e un prezzo barrato, scrivi la nota in italiano, per esempio: 'Prezzo valido fino all'8 febbraio 2027; prezzo barrato 810 €'. Non scrivere che il prezzo barrato tornerà in vigore. Non inserire il limite di rumore (dB) né altre informazioni. Senza scadenza o prezzo barrato, notes è null.\n- booked: stato di prenotazione dell'evento, uno tra: 'meno_30' (Less than 30% booked), '30_piu' (30% or more booked), '50_piu' (50% or more booked), '80_piu' (80% or more booked), 'sold_out' (Sold out senza pulsante Join Waitlist), 'sold_out_lista_attesa' (Sold out con pulsante Join Waitlist); null se non indicato.\n- url: il link del pulsante 'Register' o 'Join Waitlist' di quell'evento; se manca, il link del circuito.\n- event_type: null."},
 ]
 
 PROMPT = """Oggi è {today}. Ti passo il testo estratto dalla pagina calendario di un organizzatore di giornate in pista per moto ({organizer}).
@@ -46,6 +48,7 @@ Regole:
 - Se ci sono più tariffe per lo stesso evento (es. 1, 2 o 3 giorni), inserisci una voce di prezzo per ciascuna con label chiara.
 - Se il sito elenca ogni giorno come riga separata, mantieni un evento per riga.
 - Includi solo vere giornate in pista, con una data e un circuito. Ignora buoni regalo, abbonamenti, servizi, assicurazioni, merchandising e qualsiasi altra cosa che non sia una giornata in pista.
+{hint}
 
 TESTO DELLA PAGINA:
 {text}
@@ -53,6 +56,15 @@ TESTO DELLA PAGINA:
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 AVAILABILITY = {"disponibile", "lista_attesa", "esaurito", "non_indicata"}
+# Solo per CR Moto: la percentuale prenotata decide testo e colore della barra (ok=verde, warn=giallo, bad=rosso)
+BOOKED = {
+    "meno_30": ("Meno del 30% prenotato", "ok", "disponibile"),
+    "30_piu": ("30% o più prenotato", "warn", "disponibile"),
+    "50_piu": ("50% o più prenotato", "warn", "disponibile"),
+    "80_piu": ("80% o più prenotato", "bad", "disponibile"),
+    "sold_out": ("Sold out", "bad", "esaurito"),
+    "sold_out_lista_attesa": ("Sold out / lista d'attesa", "bad", "esaurito"),
+}
 
 
 def page_to_text(html, base_url, keep_repeats=False):
@@ -78,10 +90,11 @@ def page_to_text(html, base_url, keep_repeats=False):
     return "\n".join(lines)[:MAX_CHARS]
 
 
-def extract(client, organizer, text, today):
-    prompt = PROMPT.format(today=today.isoformat(), organizer=organizer, text=text)
+def extract(client, organizer, text, today, hint=""):
+    hint = f"Indicazioni specifiche per questo sito:\n{hint}" if hint else ""
+    prompt = PROMPT.format(today=today.isoformat(), organizer=organizer, text=text, hint=hint)
     msg = client.messages.create(
-        model=MODEL, max_tokens=12000, messages=[{"role": "user", "content": prompt}]
+        model=MODEL, max_tokens=20000, messages=[{"role": "user", "content": prompt}]
     )
     if msg.stop_reason == "max_tokens":
         raise RuntimeError("risposta dell'AI troncata")
@@ -116,7 +129,7 @@ def clean_event(ev, site, today):
         if not (isinstance(url, str) and url.startswith("http")):
             url = site["url"]
         availability = ev.get("availability")
-        return {
+        event = {
             "organizer": site["organizer"],
             "circuit": circuit,
             "date_start": start,
@@ -127,6 +140,10 @@ def clean_event(ev, site, today):
             "url": url,
             "notes": (ev.get("notes") or None),
         }
+        booked = BOOKED.get(ev.get("booked")) if site.get("booked_levels") else None
+        if booked:
+            event["status_label"], event["status_level"], event["availability"] = booked
+        return event
     except (KeyError, ValueError, TypeError, AttributeError):
         return None
 
@@ -155,7 +172,7 @@ def main():
             if resp.encoding and resp.encoding.lower() == "iso-8859-1":
                 resp.encoding = resp.apparent_encoding
             text = page_to_text(resp.text, site["url"], site.get("keep_repeats", False))
-            raw = extract(client, org, text, today)
+            raw = extract(client, org, text, today, site.get("hint", ""))
             found = [e for e in (clean_event(x, site, today) for x in raw) if e]
             if not found:
                 raise RuntimeError("0 eventi trovati: controlla la pagina o il testo estratto")
