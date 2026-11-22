@@ -1,30 +1,35 @@
 {
- "updated": "2026-11-22T05:45:16+00:00",
+ "updated": "2026-11-22T14:13:13+00:00",
  "sources": {
   "Rossocorsa": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-22T05:45:16+00:00"
+   "last_success": "2026-11-22T14:13:13+00:00"
   },
   "Gully Racing": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-22T05:45:16+00:00"
+   "last_success": "2026-11-22T14:13:13+00:00"
   },
   "Rehm Race Days": {
    "ok": true,
    "count": 12,
-   "last_success": "2026-11-22T05:45:16+00:00"
+   "last_success": "2026-11-22T14:13:13+00:00"
   },
   "Promoracing": {
    "ok": true,
    "count": 6,
-   "last_success": "2026-11-22T05:45:16+00:00"
+   "last_success": "2026-11-22T14:13:13+00:00"
   },
   "Actionbike": {
    "ok": true,
    "count": 11,
-   "last_success": "2026-11-22T05:45:16+00:00"
+   "last_success": "2026-11-22T14:13:13+00:00"
+  },
+  "CR Moto": {
+   "ok": true,
+   "count": 49,
+   "last_success": "2026-11-22T14:13:13+00:00"
   }
  },
  "events": [
@@ -36,13 +41,13 @@
    "event_type": "Challenges/Series Expert",
    "prices": [
     {
-     "label": "Event Barcelona 26.+27.11.2026",
+     "label": "Event: Barcelona",
      "amount_eur": 640
     }
    ],
    "availability": "disponibile",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/07/88_Timetable_Barcelona_26.-27.11.2026.pdf",
-   "notes": "105 db e 8,5 h di tracktime (testo troncato nella pagina). Pochi biglietti disponibili."
+   "notes": "105 db e 8,5h di tracktime. Nelle pagine risultano pochi biglietti disponibili."
   },
   {
    "organizer": "Rehm Race Days",
@@ -52,29 +57,29 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Cartagena III 22.-25.12.2026",
+     "label": "Event: Cartagena III",
      "amount_eur": 540
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/89_Timetable_Cartagena_22.-25.12.2026.pdf",
-   "notes": "100 db; massimo 25 piloti per gruppo."
+   "notes": "100 db, massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
    "circuit": "Cartagena",
    "date_start": "2026-12-27",
    "date_end": "2026-12-31",
-   "event_type": "4h Endurance con LeMans Start",
+   "event_type": "4h Endurance with LeMans Start",
    "prices": [
     {
-     "label": "Event Cartagena IV 27.-31.12.2026",
+     "label": "Event: Cartagena IV",
      "amount_eur": 760
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/90_Timetable_Cartagena_27.-31.12.2026.pdf",
-   "notes": "Briefing in DE/EN/IT/FR; 100 db; massimo 25 piloti per gruppo."
+   "notes": "Briefing in tedesco, inglese, italiano e francese; 100 db, massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
@@ -84,15 +89,15 @@
    "event_type": "Races & Endurances",
    "prices": [
     {
-     "label": "Event Valencia II 30.+31.12.2026",
+     "label": "30.-31.12.2026 (2 giorni)",
      "amount_eur": 540
     },
     {
-     "label": "Event Valencia II 27.-29.12.2026",
+     "label": "27.-29.12.2026 (3 giorni)",
      "amount_eur": 790
     },
     {
-     "label": "Event Valencia II 27.-31.12.2026",
+     "label": "27.-31.12.2026 (5 giorni)",
      "amount_eur": 1290
     }
    ],
@@ -108,13 +113,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Cartagena I 02.-05.01.2027",
+     "label": "Event: Cartagena I",
      "amount_eur": 590
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/92_Timetable_Cartagena_02.-05.01.2027.pdf",
-   "notes": "100 db; massimo 25 piloti per gruppo."
+   "notes": "100 db, massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
@@ -124,13 +129,13 @@
    "event_type": "Endurance 2h",
    "prices": [
     {
-     "label": "Event Monteblanco 18.-20.01.2027",
+     "label": "Event: Monteblanco",
      "amount_eur": 630
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/100_Timetable_Monteblanco_18.01.-20.0.2027.pdf",
-   "notes": "Briefing in DE/EN/IT/ES/FR; MotoGP & LeMans Starts; 105 db."
+   "notes": "Briefing in tedesco, inglese, italiano, spagnolo e francese; MotoGP & LeMans Starts; 105 db."
   },
   {
    "organizer": "Rehm Race Days",
@@ -140,20 +145,20 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Jerez I 22.-24.01.2027",
+     "label": "Event: Jerez I",
      "amount_eur": 790
     }
    ],
    "availability": "disponibile",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/101_Timetable_Jerez_22.-24.01.2027.pdf",
-   "notes": "Briefing in DE/FR/IT/ES/EN; riding in speed groups; 105 db. Pochi biglietti disponibili."
+   "notes": "Briefing in tedesco, francese, italiano, spagnolo e inglese; Riding in Speed Groups; 105 db. Pochi biglietti disponibili."
   },
   {
    "organizer": "Rossocorsa",
    "circuit": "Valencia",
    "date_start": "2027-02-05",
    "date_end": "2027-02-07",
-   "event_type": "Prova",
+   "event_type": null,
    "prices": [
     {
      "label": "a partire da",
@@ -205,17 +210,17 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 990.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 1040.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-02-andalucia-incl-transport",
-   "notes": "Versione con trasporto incluso, come indicato nel nome dell'evento."
+   "notes": "Evento con trasporto incluso (come indicato nel nome dell'evento)"
   },
   {
    "organizer": "Gully Racing",
@@ -245,20 +250,20 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Cartagena II 26.-28.02.2027",
+     "label": "Event: Cartagena II",
      "amount_eur": 480
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/108_Timetable_Cartagena_25.-27.02.2027.pdf",
-   "notes": "Briefing in DE/EN/IT/ES/FR; 100 db. Il PDF timetable riporta le date 25.-27.02.2027."
+   "notes": "Briefing in tedesco, inglese, italiano, spagnolo e francese; 100 db."
   },
   {
    "organizer": "Rossocorsa",
    "circuit": "Jerez",
    "date_start": "2027-03-05",
    "date_end": "2027-03-07",
-   "event_type": "Prova",
+   "event_type": null,
    "prices": [
     {
      "label": "a partire da",
@@ -310,11 +315,11 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 850.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 890.0
     }
    ],
@@ -330,13 +335,31 @@
    "event_type": "Endurance 2h",
    "prices": [
     {
-     "label": "Event Rijeka I 26.-28.03.2027",
+     "label": "Event: Rijeka I",
      "amount_eur": 590
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/105_Timetable_Rijeka_26.-28.03.2027.pdf",
    "notes": "MotoGP & LeMans Starts; 105 db."
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Aragón",
+   "date_start": "2027-04-02",
+   "date_end": "2027-04-04",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 550
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1224",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 810 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
   },
   {
    "organizer": "Rehm Race Days",
@@ -346,13 +369,31 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Portimao I 03.-05.04.2027",
+     "label": "Event: Portimao I",
      "amount_eur": 890
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/109_Timetable_Portimao_03.-05.04.2027.pdf",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-04-09",
+   "date_end": "2027-04-11",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 310
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1178",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
   },
   {
    "organizer": "Actionbike",
@@ -362,17 +403,35 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 595.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 660.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-04-rijeka",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-04-22",
+   "date_end": "2027-04-23",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 185
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1188",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 289 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Rehm Race Days",
@@ -382,13 +441,31 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Aragon I 22.-24.04.2027",
+     "label": "Event: Aragon I",
      "amount_eur": 840
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/110_Timetable_Aragon_22.-24.04.2027.pdf",
-   "notes": "Disclaimer disponibile (PDF)."
+   "notes": "Disponibile disclaimer specifico (ARAGON_I_Disclaimer)."
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-04-24",
+   "date_end": "2027-04-25",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 245
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1189",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 349 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Rehm Race Days",
@@ -398,13 +475,49 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event Barcelona 27.-29.04.2027",
+     "label": "Event: Barcelona",
      "amount_eur": 970
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/111_Timetable_Barcelona_27.-29.04.2027.pdf",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Silesia Ring",
+   "date_start": "2027-05-03",
+   "date_end": "2027-05-04",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 275
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1198",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 375 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Grobnik Circuit",
+   "date_start": "2027-05-03",
+   "date_end": "2027-05-05",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 295
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1210",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Actionbike",
@@ -414,17 +527,197 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 590.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 650.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-05-tazio-nuvolari",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-05-13",
+   "date_end": "2027-05-14",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 185
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1179",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 299 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-05-15",
+   "date_end": "2027-05-16",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 235
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1180",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 350 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Brno Circuit",
+   "date_start": "2027-05-17",
+   "date_end": "2027-05-18",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 399
+    }
+   ],
+   "availability": "esaurito",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1216",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "Sold out / lista d'attesa",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-05-20",
+   "date_end": "2027-05-21",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 185
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1190",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 289 €",
+   "status_label": "80% o più prenotato",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-05-22",
+   "date_end": "2027-05-23",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 245
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1191",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 349 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Cremona Circuit",
+   "date_start": "2027-05-31",
+   "date_end": "2027-06-02",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 435
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1223",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 555 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Tor Poznan",
+   "date_start": "2027-05-31",
+   "date_end": "2027-06-01",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 249
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1199",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 349 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Brno Circuit",
+   "date_start": "2027-06-04",
+   "date_end": "2027-06-06",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 599
+    }
+   ],
+   "availability": "esaurito",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1217",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 650 €",
+   "status_label": "Sold out / lista d'attesa",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-06-07",
+   "date_end": "2027-06-08",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 170
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1192",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 276 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-06-09",
+   "date_end": "2027-06-10",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 171
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1181",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 275 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Actionbike",
@@ -434,17 +727,246 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 495.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 560.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-06-rijeka",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Kymiring",
+   "date_start": "2027-06-12",
+   "date_end": "2027-06-13",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 240
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1227",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 350 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Sachsenring",
+   "date_start": "2027-06-17",
+   "date_end": "2027-06-18",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 387
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1206",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 499 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Anneau du Rhin",
+   "date_start": "2027-06-17",
+   "date_end": "2027-06-18",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 285
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1208",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Autodrom Most",
+   "date_start": "2027-06-21",
+   "date_end": "2027-06-22",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 359
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1202",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
+   "status_label": "80% o più prenotato",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-06-21",
+   "date_end": "2027-06-22",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 171
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1182",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 275 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-06-23",
+   "date_end": "2027-06-24",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 170
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1193",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 276 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Oschersleben",
+   "date_start": "2027-06-28",
+   "date_end": "2027-06-29",
+   "event_type": null,
+   "prices": [],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/event/oschersleben",
+   "notes": null,
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Tor Poznan",
+   "date_start": "2027-07-01",
+   "date_end": "2027-07-02",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 249
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1200",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 349 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Autodrom Most",
+   "date_start": "2027-07-05",
+   "date_end": "2027-07-06",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 359
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1203",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 459 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Grobnik Circuit",
+   "date_start": "2027-07-05",
+   "date_end": "2027-07-07",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 295
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1211",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-07-08",
+   "date_end": "2027-07-09",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 185
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1194",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 289 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-07-10",
+   "date_end": "2027-07-11",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 249
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1195",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 349 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-07-12",
+   "date_end": "2027-07-13",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 171
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1183",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 275 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Actionbike",
@@ -454,17 +976,179 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 750.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 780.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-07-most",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Mugello",
+   "date_start": "2027-07-19",
+   "date_end": "2027-07-21",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 689
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1207",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 799 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Brno Circuit",
+   "date_start": "2027-07-26",
+   "date_end": "2027-07-27",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 399
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1218",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "80% o più prenotato",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Brno Circuit",
+   "date_start": "2027-07-28",
+   "date_end": "2027-07-29",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 366
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1219",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Red Bull Ring",
+   "date_start": "2027-08-02",
+   "date_end": "2027-08-03",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 499
+    }
+   ],
+   "availability": "esaurito",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1222",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 599 €",
+   "status_label": "Sold out / lista d'attesa",
+   "status_level": "bad"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Autodrom Most",
+   "date_start": "2027-08-06",
+   "date_end": "2027-08-08",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 539
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1201",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 650 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-08-09",
+   "date_end": "2027-08-10",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 170
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1196",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 276 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-08-11",
+   "date_end": "2027-08-12",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 171
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1184",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 275 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-08-13",
+   "date_end": "2027-08-15",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 310
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1185",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Grobnik Circuit",
+   "date_start": "2027-08-19",
+   "date_end": "2027-08-20",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 199
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1212",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 299 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Actionbike",
@@ -474,17 +1158,138 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 790.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 840.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-08-brno",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Grobnik Circuit",
+   "date_start": "2027-08-21",
+   "date_end": "2027-08-22",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 255
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1213",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 355 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Autodrom Most",
+   "date_start": "2027-08-23",
+   "date_end": "2027-08-25",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 440
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1204",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 550 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Oschersleben",
+   "date_start": "2027-09-06",
+   "date_end": "2027-09-07",
+   "event_type": null,
+   "prices": [],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/event/oschersleben",
+   "notes": null,
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Brno Circuit",
+   "date_start": "2027-09-06",
+   "date_end": "2027-09-08",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 455
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1220",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 550 €",
+   "status_label": "50% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Autodrom Most",
+   "date_start": "2027-09-10",
+   "date_end": "2027-09-12",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 539
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1205",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 650 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-09-13",
+   "date_end": "2027-09-14",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 171
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1186",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 275 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Pannonia Ring",
+   "date_start": "2027-09-15",
+   "date_end": "2027-09-16",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 170
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1197",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 276 €",
+   "status_label": "30% o più prenotato",
+   "status_level": "warn"
   },
   {
    "organizer": "Actionbike",
@@ -494,17 +1299,53 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 489.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 539.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-09-pannoniaring",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Slovakia Ring",
+   "date_start": "2027-09-17",
+   "date_end": "2027-09-19",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 310
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1187",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 450 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Anneau du Rhin",
+   "date_start": "2027-09-23",
+   "date_end": "2027-09-24",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 285
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1209",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
   },
   {
    "organizer": "Actionbike",
@@ -514,11 +1355,11 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 540.0
     },
     {
-     "label": "prezzo alternativo (significato non indicato)",
+     "label": "prezzo 2 (significato non indicato)",
      "amount_eur": 590.0
     }
    ],
@@ -534,7 +1375,7 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo (significato non indicato)",
+     "label": "prezzo 1 (significato non indicato)",
      "amount_eur": 530.0
     }
    ],
@@ -561,6 +1402,42 @@
    "availability": "non_indicata",
    "url": "https://www.gullyracing.it/prodotto?id=221",
    "notes": null
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Aragón",
+   "date_start": "2027-11-07",
+   "date_end": "2027-11-09",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 530
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1225",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 790 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
+  },
+  {
+   "organizer": "CR Moto",
+   "circuit": "Jerez",
+   "date_start": "2027-11-12",
+   "date_end": "2027-11-14",
+   "event_type": null,
+   "prices": [
+    {
+     "label": "",
+     "amount_eur": 485
+    }
+   ],
+   "availability": "disponibile",
+   "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1226",
+   "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 766 €",
+   "status_label": "Meno del 30% prenotato",
+   "status_level": "ok"
   }
  ]
 }
