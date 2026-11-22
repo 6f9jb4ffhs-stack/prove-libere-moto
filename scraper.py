@@ -3,6 +3,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from collections import Counter
 from datetime import date, datetime, timezone
 from urllib.parse import urljoin
@@ -48,6 +49,7 @@ Regole:
 - Se ci sono più tariffe per lo stesso evento (es. 1, 2 o 3 giorni), inserisci una voce di prezzo per ciascuna con label chiara.
 - Se il sito elenca ogni giorno come riga separata, mantieni un evento per riga.
 - Includi solo vere giornate in pista, con una data e un circuito. Ignora buoni regalo, abbonamenti, servizi, assicurazioni, merchandising e qualsiasi altra cosa che non sia una giornata in pista.
+- Non riportare in notes il limite di rumore (dB): non serve.
 {hint}
 
 TESTO DELLA PAGINA:
@@ -65,6 +67,60 @@ BOOKED = {
     "sold_out": ("Sold out", "bad", "esaurito"),
     "sold_out_lista_attesa": ("Sold out / lista d'attesa", "bad", "esaurito"),
 }
+
+
+# Nomi dei circuiti: ogni variante viene ricondotta al nome mostrato nell'app.
+# Maiuscole e accenti non contano ("Aragón" e "aragon" sono la stessa voce).
+# Per aggiungere una variante basta aggiungere una riga: "variante": "nome da mostrare".
+CIRCUIT_NAMES = {
+    "Aragon": "Aragon",
+    "Autodrom Most": "Most",
+    "Brno Circuit": "Brno",
+    "Brünn": "Brno",
+    "Autódromo Internacional do Algarve - Portimao": "Portimao",
+    "Grobnik Circuit": "Rijeka",
+    "Circuito di Jerez": "Jerez",
+    "Pannonia Ring": "Pannoniaring",
+    "Slovakiaring": "Slovakia Ring",
+    "Redbull Ring": "Red Bull Ring",
+}
+
+
+def _circuit_key(name):
+    plain = unicodedata.normalize("NFKD", name.replace("\u2013", "-"))
+    plain = "".join(c for c in plain if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", plain).strip().lower()
+
+
+# anche i nomi finali contano come varianti, così "pannoniaring" o "RIJEKA" vengono riscritti nella forma giusta
+CIRCUIT_LOOKUP = {_circuit_key(shown): shown for shown in CIRCUIT_NAMES.values()}
+CIRCUIT_LOOKUP.update({_circuit_key(variant): shown for variant, shown in CIRCUIT_NAMES.items()})
+
+
+def canonical_circuit(name):
+    return CIRCUIT_LOOKUP.get(_circuit_key(name), name)
+
+
+NOISE_RE = re.compile(
+    r"(?:limite(?: di)? rumor\w+|rumorosit\w+|rumore|livello sonoro|noise(?: limit)?)?\s*:?\s*"
+    r"(?:max(?:imo)?\.?\s+)?\d{2,3}\s*db\b(?:\s*\(a\))?(?:\s*(?:[,;]|\be\b|\band\b))?\s*",
+    re.IGNORECASE,
+)
+
+
+def remove_noise_info(text):
+    """Toglie il limite di rumore (dB) dalle note e tiene il resto."""
+    if not text:
+        return text
+    cleaned = NOISE_RE.sub(" ", text)
+    cleaned = re.sub(r"\s+([,;.])", r"\1", cleaned)
+    cleaned = re.sub(r"([,;]\s*){2,}", ", ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    cleaned = re.sub(r"^[\s,;:.\-]+", "", cleaned)   # via la punteggiatura rimasta all'inizio
+    cleaned = re.sub(r"[\s,;:\-]+$", "", cleaned)    # e alla fine (il punto finale resta)
+    if not re.search(r"\w", cleaned):
+        return None
+    return cleaned[0].upper() + cleaned[1:]
 
 
 def page_to_text(html, base_url, keep_repeats=False):
@@ -194,6 +250,9 @@ def main():
             }
             print(f"[ERRORE] {org}: {exc}")
 
+    for e in events:
+        e["circuit"] = canonical_circuit(e["circuit"])
+        e["notes"] = remove_noise_info(e.get("notes"))
     unique = {}
     for e in events:
         key = (e["organizer"], e["date_start"], e["date_end"], e["circuit"].lower(), (e["event_type"] or "").lower())
