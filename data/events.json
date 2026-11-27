@@ -1,35 +1,35 @@
 {
- "updated": "2026-11-26T05:46:59+00:00",
+ "updated": "2026-11-27T05:50:38+00:00",
  "sources": {
   "Rossocorsa": {
    "ok": true,
    "count": 2,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   },
   "Gully Racing": {
    "ok": true,
    "count": 3,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   },
   "Rehm Race Days": {
    "ok": true,
    "count": 12,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   },
   "Promoracing": {
    "ok": true,
    "count": 6,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   },
   "Actionbike": {
    "ok": true,
    "count": 11,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   },
   "CR Moto": {
    "ok": true,
    "count": 49,
-   "last_success": "2026-11-26T05:46:59+00:00"
+   "last_success": "2026-11-27T05:50:38+00:00"
   }
  },
  "events": [
@@ -39,15 +39,10 @@
    "date_start": "2026-11-26",
    "date_end": "2026-11-27",
    "event_type": "Challenges/Series Expert",
-   "prices": [
-    {
-     "label": "Event: Barcelona (26.+27.11.2026)",
-     "amount_eur": 640
-    }
-   ],
-   "availability": "disponibile",
+   "prices": [],
+   "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/07/88_Timetable_Barcelona_26.-27.11.2026.pdf",
-   "notes": "8,5 h di tracktime. Pochi biglietti disponibili."
+   "notes": "8,5h di tracktime (testo nella pagina incompleto: \"/ per\")."
   },
   {
    "organizer": "Rehm Race Days",
@@ -57,29 +52,29 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Cartagena III (22.-25.12.2026)",
+     "label": "Event: Cartagena III",
      "amount_eur": 540
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/89_Timetable_Cartagena_22.-25.12.2026.pdf",
-   "notes": "Massimo 25 piloti per gruppo."
+   "notes": "Massimo 25 piloti per gruppo. Opzione trasporto Cartagena-Valencia (prezzo non indicato)."
   },
   {
    "organizer": "Rehm Race Days",
    "circuit": "Cartagena",
    "date_start": "2026-12-27",
    "date_end": "2026-12-31",
-   "event_type": "4h Endurance with LeMans Start",
+   "event_type": "4h Endurance",
    "prices": [
     {
-     "label": "Event: Cartagena IV (27.-31.12.2026)",
+     "label": "Event: Cartagena IV",
      "amount_eur": 760
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/90_Timetable_Cartagena_27.-31.12.2026.pdf",
-   "notes": "Briefing in tedesco, inglese, italiano e francese. Massimo 25 piloti per gruppo."
+   "notes": "LeMans Start. Briefing in tedesco, inglese, italiano e francese. Massimo 25 piloti per gruppo."
   },
   {
    "organizer": "Rehm Race Days",
@@ -89,21 +84,21 @@
    "event_type": "Races & Endurances",
    "prices": [
     {
-     "label": "Event: Valencia II (30.+31.12.2026)",
+     "label": "Event: Valencia II, 30.+31.12.2026",
      "amount_eur": 540
     },
     {
-     "label": "Event: Valencia II (27.-29.12.2026)",
+     "label": "Event: Valencia II, 27.-29.12.2026",
      "amount_eur": 790
     },
     {
-     "label": "Event: Valencia II (27.-31.12.2026)",
+     "label": "Event: Valencia II, 27.-31.12.2026",
      "amount_eur": 1290
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/91_Timetable_Valencia_27.-31.12.2026.pdf",
-   "notes": "Tariffe diverse in base ai giorni di partecipazione."
+   "notes": "Opzione trasporto Valencia-Cartagena (prezzo non indicato). Tariffe differenziate per periodo."
   },
   {
    "organizer": "Rehm Race Days",
@@ -113,13 +108,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Cartagena I (02.-05.01.2027)",
+     "label": "Event: Cartagena I",
      "amount_eur": 590
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/92_Timetable_Cartagena_02.-05.01.2027.pdf",
-   "notes": "Massimo 25 piloti per gruppo."
+   "notes": "Massimo 25 piloti per gruppo. Opzione trasporto Cartagena-Monteblanco (prezzo non indicato)."
   },
   {
    "organizer": "Rehm Race Days",
@@ -129,13 +124,13 @@
    "event_type": "Endurance 2h",
    "prices": [
     {
-     "label": "Event: Monteblanco (18.-20.01.2027)",
+     "label": "Event: Monteblanco",
      "amount_eur": 630
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/100_Timetable_Monteblanco_18.01.-20.0.2027.pdf",
-   "notes": "Briefing in tedesco, inglese, italiano, spagnolo e francese. Partenze MotoGP e LeMans."
+   "notes": "MotoGP & LeMans Starts. Briefing in tedesco, inglese, italiano, spagnolo e francese. Opzioni trasporto (prezzo non indicato)."
   },
   {
    "organizer": "Rehm Race Days",
@@ -145,13 +140,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Jerez I (22.-24.01.2027)",
+     "label": "Event: Jerez I",
      "amount_eur": 790
     }
    ],
    "availability": "disponibile",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/101_Timetable_Jerez_22.-24.01.2027.pdf",
-   "notes": "Briefing in tedesco, francese, italiano, spagnolo e inglese. Guida in gruppi di velocità. Pochi biglietti disponibili."
+   "notes": "Riding in speed groups. Pochi biglietti disponibili. Briefing in tedesco, francese, italiano, spagnolo e inglese."
   },
   {
    "organizer": "Rossocorsa",
@@ -210,17 +205,17 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 990.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 1040.0
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.actionbike.de/en/events/sessions/event-02-andalucia-incl-transport",
-   "notes": "Versione con trasporto incluso (dal nome dell'evento)."
+   "notes": "Nel nome dell'evento è indicato 'incl. Transport' (trasporto incluso)."
   },
   {
    "organizer": "Gully Racing",
@@ -250,7 +245,7 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Cartagena II (26.-28.02.2027)",
+     "label": "Event: Cartagena II",
      "amount_eur": 480
     }
    ],
@@ -315,11 +310,11 @@
    "event_type": "Riding split into Skill/ability Groups",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 850.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 890.0
     }
    ],
@@ -335,13 +330,13 @@
    "event_type": "Endurance 2h",
    "prices": [
     {
-     "label": "Event: Rijeka I (26.-28.03.2027)",
+     "label": "Event: Rijeka I",
      "amount_eur": 590
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/105_Timetable_Rijeka_26.-28.03.2027.pdf",
-   "notes": "Partenze MotoGP e LeMans."
+   "notes": "MotoGP & LeMans Starts."
   },
   {
    "organizer": "CR Moto",
@@ -369,13 +364,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Portimao I (03.-05.04.2027)",
+     "label": "Event: Portimao I",
      "amount_eur": 890
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/09/109_Timetable_Portimao_03.-05.04.2027.pdf",
-   "notes": null
+   "notes": "Opzioni box (Boxen PT, Perfect Box by Alf) e trasporto (prezzi non indicati)."
   },
   {
    "organizer": "CR Moto",
@@ -403,11 +398,11 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 595.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 660.0
     }
    ],
@@ -430,8 +425,8 @@
    "availability": "disponibile",
    "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1188",
    "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 289 €",
-   "status_label": "50% o più prenotato",
-   "status_level": "warn"
+   "status_label": "80% o più prenotato",
+   "status_level": "bad"
   },
   {
    "organizer": "Rehm Race Days",
@@ -441,13 +436,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Aragon I (22.-24.04.2027)",
+     "label": "Event: Aragon I",
      "amount_eur": 840
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/110_Timetable_Aragon_22.-24.04.2027.pdf",
-   "notes": null
+   "notes": "Opzioni trasporto Aragon-Barcelona e ex Lager Cartagena (prezzi non indicati). Disclaimer specifico disponibile."
   },
   {
    "organizer": "CR Moto",
@@ -495,13 +490,13 @@
    "event_type": null,
    "prices": [
     {
-     "label": "Event: Barcelona (27.-29.04.2027)",
+     "label": "Event: Barcelona",
      "amount_eur": 970
     }
    ],
    "availability": "non_indicata",
    "url": "https://www.rehmracedays.com/wp-content/uploads/2026/11/111_Timetable_Barcelona_27.-29.04.2027.pdf",
-   "notes": null
+   "notes": "Opzione trasporto ex Lager Cartagena (prezzo non indicato)."
   },
   {
    "organizer": "CR Moto",
@@ -536,7 +531,7 @@
    "availability": "disponibile",
    "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1210",
    "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
-   "status_label": "30% o più prenotato",
+   "status_label": "50% o più prenotato",
    "status_level": "warn"
   },
   {
@@ -547,11 +542,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 590.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 650.0
     }
    ],
@@ -747,11 +742,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 495.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 560.0
     }
    ],
@@ -825,10 +820,10 @@
      "amount_eur": 359
     }
    ],
-   "availability": "disponibile",
+   "availability": "esaurito",
    "url": "https://www.crmoto.eu/en/users/loginOrRegister?redirect=%2Fen%2Fevents%2Fregister%2F1202",
    "notes": "Prezzo valido fino all'8 febbraio 2027; prezzo barrato 399 €",
-   "status_label": "80% o più prenotato",
+   "status_label": "Sold out / lista d'attesa",
    "status_level": "bad"
   },
   {
@@ -996,11 +991,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 750.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 780.0
     }
    ],
@@ -1178,11 +1173,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 790.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 840.0
     }
    ],
@@ -1319,11 +1314,11 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 489.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 539.0
     }
    ],
@@ -1375,11 +1370,11 @@
    "event_type": "Combi Race Weekend/Free Riding",
    "prices": [
     {
-     "label": "prezzo 1 (significato non indicato)",
+     "label": "prezzo",
      "amount_eur": 540.0
     },
     {
-     "label": "prezzo 2 (significato non indicato)",
+     "label": "prezzo alternativo (significato non indicato)",
      "amount_eur": 590.0
     }
    ],
@@ -1395,7 +1390,7 @@
    "event_type": null,
    "prices": [
     {
-     "label": "prezzo unico indicato",
+     "label": "prezzo",
      "amount_eur": 530.0
     }
    ],
